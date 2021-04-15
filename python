@@ -1,0 +1,58 @@
+import math 
+'''class myClass:
+
+    def __init__(self,classname,credit,score):
+      self.classname=classname
+      self.credit=credit
+      self.score=score
+      self.tp=credit*points
+      
+    def __str__(self):
+      return self.classname + '' + str(self.credit) + '' + str(self.score) + '' + str(self.points) + '' + str(self.tp)
+'''
+inp1 = ""
+totalPoints = 0
+totalCredits = 0 
+points = 0
+#classes = []
+#cls = myClass("",0,0)
+while inp1!= "quit":
+  inp1 = input("Class_Name: ")
+  if (inp1!="quit"):
+    inp2 = float(input("credits: "))
+    print (" >-------------------------------< "+ str(inp2)
+    )
+    inp3 = float(input("score: "))
+    totalCredits+=inp2
+   
+  if inp3 >= 93:
+    points = 4.0
+  elif inp3 >= 90 or inp3 <= 92:
+    points = 3.7
+  elif inp3 >= 87 or inp3 <= 89:
+    points = 3.3
+  elif inp3 >= 83 or inp3 <= 86:
+    points =3.0
+  elif inp3 >= 80 or inp3 <= 82:
+    points= 2.7
+  elif inp3 >= 77 or inp3 <= 79:
+    points= 2.3
+  elif inp3 >= 73 or inp3 <= 76:
+    points= 2.0
+  elif inp3 >= 70 or inp3 <= 72:
+    points= 1.7
+  elif inp3 >= 67 or inp3 <= 69:
+    points= 1.3
+  elif inp3 >= 65 or inp3 <= 66:
+    points= 1.0
+  elif inp3 <= 65:
+    points = 0.0
+  totalPoints += points * inp2
+         
+#  classes.append(myClass(inp1,float(inp2),float(inp3)))
+
+print('Total Points: ' + format(totalPoints))
+print('Total Credits: ' + format(totalCredits))
+
+gpa = totalPoints/totalCredits
+print('GPA: {}'.format(gpa))
